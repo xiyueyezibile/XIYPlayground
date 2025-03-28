@@ -45,7 +45,7 @@ export default function FileNameList() {
           actived={item === selectedFileName}
           onClick={() => setSelectedFileName(item)}
           onEditComplete={(name: string) => handleEditComplete(name, item)}
-          onRemove={e => {
+          onRemove={() => {
             handleRemove(item);
           }}
         ></FileNameItem>

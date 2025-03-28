@@ -7,7 +7,7 @@ import './index.scss';
 import { useContext } from 'react';
 import { PlaygroundContext } from './PlaygroundContext';
 export default function ReactPlayground() {
-  const { theme, setTheme } = useContext(PlaygroundContext);
+  const { theme } = useContext(PlaygroundContext);
   return (
     <div className={theme} style={{ height: '100vh' }}>
       <Header />
