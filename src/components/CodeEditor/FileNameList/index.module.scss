@@ -8,8 +8,8 @@
   border-bottom: 1px solid #ddd;
   box-sizing: border-box;
 
-  color: #444;
-  background-color: #fff;
+  background-color: var(--bg);
+  color: var(--text);
   &::-webkit-scrollbar {
     height: 1px;
   }
@@ -40,4 +40,16 @@
       cursor: text;
     }
   }
+}
+
+.tabs-item-input {
+  width: 90px;
+  padding: 4px 0 4px 10px;
+  font-size: 13px;
+
+  color: #444;
+  background-color: #ddd;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
 }
