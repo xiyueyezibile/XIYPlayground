@@ -35,9 +35,11 @@ export default function Preview() {
     if (!compilerWorkerRef.current) {
       compilerWorkerRef.current = new CompilerWorker();
       compilerWorkerRef.current.addEventListener('message', data => {
-        console.log('worker', data);
-        if (data.type === 'COMPILED_CODE') {
-          setCompiledCode(data.data);
+        console.log('worker', data.data);
+        if (data.data.type === 'COMPILED_CODE') {
+          console.log('update');
+
+          setCompiledCode(data.data.data);
         }
       });
     }
